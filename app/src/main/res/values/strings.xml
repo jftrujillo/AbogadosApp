@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AbogadosApp</string>
+    <string name="nombre">Nombre</string>
+    <string name="cargo">cargo</string>
 </resources>
