@@ -1,5 +1,7 @@
 package com.example.jhon.abogadosapp.models;
 
+import android.content.ContentValues;
+
 /**
  * Created by jhon on 12/10/16.
  */
@@ -45,4 +47,13 @@ public class Abogado {
 
     //endregion
 
+    public ContentValues toContentValues(){
+
+        ContentValues values = new ContentValues();
+        values.put(AbogadoContract.LawyerEntry.ID, id);
+        values.put(AbogadoContract.LawyerEntry.NAME, nombre);
+        values.put(AbogadoContract.LawyerEntry.CARGO, cargo);
+        values.put(AbogadoContract.LawyerEntry.DESCRIPCION, descripcion);
+        return values;
+    }
 }
