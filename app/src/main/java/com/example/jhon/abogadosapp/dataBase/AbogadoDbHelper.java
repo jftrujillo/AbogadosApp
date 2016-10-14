@@ -2,6 +2,7 @@ package com.example.jhon.abogadosapp.dataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -38,7 +39,27 @@ public class AbogadoDbHelper extends SQLiteOpenHelper {
 
         db.insert(AbogadoContract.LawyerEntry.TABLE_NAME,null,contentValues);
 
+        ContentValues contentValues2 = new ContentValues();
+        contentValues2.put(AbogadoContract.LawyerEntry.ID,"100611023958");
+        contentValues2.put(AbogadoContract.LawyerEntry.NAME,"Jorgue Puyol");
+        contentValues2.put(AbogadoContract.LawyerEntry.CARGO,"Abogado Administrativo");
+        contentValues2.put(AbogadoContract.LawyerEntry.DESCRIPCION,"Abogado con experencia en casos de empresas");
 
+        db.insert(AbogadoContract.LawyerEntry.TABLE_NAME,null,contentValues2);
+
+        ContentValues contentValues3 = new ContentValues();
+        contentValues3.put(AbogadoContract.LawyerEntry.ID,"100611023959");
+        contentValues3.put(AbogadoContract.LawyerEntry.NAME,"Carlos Puyo");
+        contentValues3.put(AbogadoContract.LawyerEntry.CARGO,"Abogado Judicial");
+        contentValues3.put(AbogadoContract.LawyerEntry.DESCRIPCION,"Abogado con experencia en casos de familia");
+        db.insert(AbogadoContract.LawyerEntry.TABLE_NAME,null,contentValues3);
+
+        ContentValues contentValues4 = new ContentValues();
+        contentValues4.put(AbogadoContract.LawyerEntry.ID,"100611023960");
+        contentValues4.put(AbogadoContract.LawyerEntry.NAME,"jhon Puyol");
+        contentValues4.put(AbogadoContract.LawyerEntry.CARGO,"Abogado adsfa");
+        contentValues4.put(AbogadoContract.LawyerEntry.DESCRIPCION,"Abogado con experencia en casos de familia");
+        db.insert(AbogadoContract.LawyerEntry.TABLE_NAME,null,contentValues4);
     }
 
     @Override
@@ -52,5 +73,17 @@ public class AbogadoDbHelper extends SQLiteOpenHelper {
                 AbogadoContract.LawyerEntry.TABLE_NAME,
                 null,
                 abogado.toContentValues());
+    }
+
+    public Cursor getAllLawyer(){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.query(AbogadoContract.LawyerEntry.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
+        return  cursor;
     }
 }

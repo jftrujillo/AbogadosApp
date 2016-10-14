@@ -36,7 +36,7 @@ public class ListAbogadosAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return Integer.parseInt(data.get(position).getId());
+        return Long.parseLong(data.get(position).getId());
     }
 
     @Override
