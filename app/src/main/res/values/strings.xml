@@ -2,4 +2,7 @@
     <string name="app_name">AbogadosApp</string>
     <string name="nombre">Nombre</string>
     <string name="cargo">cargo</string>
+    <string name="nombre_abogado">Nombre Abogado</string>
+    <string name="cedula">Cedula</string>
+    <string name="descripcion">Descripcion</string>
 </resources>
