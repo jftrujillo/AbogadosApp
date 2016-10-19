@@ -20,6 +20,7 @@
             android:orientation="vertical"
             >
     <EditText
+        android:id="@+id/nombre"
         android:padding="@dimen/medium_padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +29,7 @@
         />
 
     <EditText
+        android:id="@+id/cedula"
         android:padding="@dimen/medium_padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,6 +37,7 @@
         android:hint="@string/cedula"
         />
     <EditText
+        android:id="@+id/descripcion"
         android:padding="@dimen/medium_padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,6 +46,7 @@
         />
 
     <EditText
+        android:id="@+id/cargo"
         android:padding="@dimen/medium_padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
