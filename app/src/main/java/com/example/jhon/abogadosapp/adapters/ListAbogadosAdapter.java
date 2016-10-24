@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.jhon.abogadosapp.R;
-import com.example.jhon.abogadosapp.models.Abogado;
+import com.example.jhon.abogadosapp.db.Abogado;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class ListAbogadosAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return Long.parseLong(data.get(position).getId());
+        return data.get(position).getId();
     }
 
     @Override

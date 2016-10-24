@@ -5,4 +5,5 @@
     <string name="nombre_abogado">Nombre Abogado</string>
     <string name="cedula">Cedula</string>
     <string name="descripcion">Descripcion</string>
+    <string name="abogados">Abogados</string>
 </resources>

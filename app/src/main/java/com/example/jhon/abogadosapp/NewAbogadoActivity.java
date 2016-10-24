@@ -1,14 +1,12 @@
 package com.example.jhon.abogadosapp;
 
-import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.jhon.abogadosapp.dataBase.AbogadoDbHelper;
-import com.example.jhon.abogadosapp.models.Abogado;
+import com.example.jhon.abogadosapp.db.Abogado;
 
 public class NewAbogadoActivity extends AppCompatActivity implements View.OnClickListener {
     EditText nombre, cedula, cargo, descripcion;
@@ -31,9 +29,6 @@ public class NewAbogadoActivity extends AppCompatActivity implements View.OnClic
         abogado.setNombre(nombre.getText().toString());
         abogado.setDescripcion(descripcion.getText().toString());
         abogado.setCargo(cargo.getText().toString());
-        abogado.setId(cedula.getText().toString());
-        AbogadoDbHelper helper = new AbogadoDbHelper(this);
-        helper.guardarAbogado(abogado);
         finish();
     }
 }

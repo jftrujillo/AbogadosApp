@@ -11,7 +11,7 @@ import de.greenrobot.dao.DaoException;
 /**
  * Entity mapped to table "ABOGADO".
  */
-public class Abogado {
+public class  Abogado {
 
     private Long id;
     /** Not-null value. */
@@ -134,6 +134,7 @@ public class Abogado {
     }
 
     // KEEP METHODS - put your custom methods here
+
     // KEEP METHODS END
 
 }
